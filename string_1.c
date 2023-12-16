@@ -105,7 +105,7 @@ void rotate_right(stack_t **stack, __attribute__((unused))unsigned int l_num)
 int parse_line(char *buffer, int l_num, int fmt)
 {
 	char *opcode, *f;
-	const char *delimi = "\n";
+	const char *delimi = "\n ";
 
 	if (buffer == NULL)
 		err(4);

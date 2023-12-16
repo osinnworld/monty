@@ -39,7 +39,7 @@ void show_stack(stack_t **stack, unsigned int l_num)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		printf("%d\n"' tmp->n);
+		printf("%d\n", tmp->n);
 		tmp = tmp->nxt;
 	}
 }
@@ -53,7 +53,7 @@ void pop_top(stack_t **stack, unsigned int l_num)
 {
 	stack_t *tmp;
 
-	if (stack === NULL || *stack == NULL)
+	if (stack == NULL || *stack == NULL)
 		more_error(7, l_num);
 
 	tmp = *stack;

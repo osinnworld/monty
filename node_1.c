@@ -1,11 +1,13 @@
+#include "monty.h"
+
 /**
  * create_node - Allocates memory for a node and assigns a value
  * @vl: parameter
  * Return: upon success
- */*
+ */
 stack_t *create_node(int n)
 {
-	stack_t *nod - malloc(sizeof(stack_t));
+	stack_t *nod = malloc(sizeof(stack_t));
 
 	if (nod == NULL)
 		err(4);
@@ -38,7 +40,7 @@ void free_nodes(void)
  * @n_node: parameter
  * @l_num: parameter
  */
-void add_queue(stack_t **n_node, __attribute__((unused))unsigned int i_num)
+void add_queue(stack_t **n_node, __attribute__((unused))unsigned int l_num)
 {
 	stack_t *tmp;
 

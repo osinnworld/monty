@@ -28,7 +28,7 @@ typedef struct stack_s
  * @opcode: parameter
  * @f: parameter
  */
-type struct instruction_s
+typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int l_num);

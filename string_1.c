@@ -39,7 +39,7 @@ void print_string(stack_t **stack, __attribute__((unused))unsigned int l_num)
 	while (tmp != NULL)
 	{
 		vl = tmp->n;
-		if (vl <- 0 || vl > 127)
+		if (vl <= 0 || vl > 127)
 			break;
 		printf("%c", vl);
 		tmp = tmp->nxt;
@@ -123,4 +123,4 @@ int parse_line(char *buffer, int l_num, int fmt)
 
 	find_func(opcode, f, l_num, fmt);
 	return (fmt);
-
+}

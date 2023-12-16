@@ -52,10 +52,10 @@ void string_error(int error_code, ...)
 	{
 		case 10:
 			fprintf(stderr, "L%d: can't pchar, vl out of range\n", l_num);
-break:
+			break;
 		case 11:
 			fprintf(stderr, "L%d: can't pchar, stack empty\n", l_num);
-break:
+			break;
 		default:
 			break;
 	}

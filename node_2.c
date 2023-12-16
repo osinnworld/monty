@@ -42,11 +42,11 @@ void add_nodes(stack_t **stack, unsigned int l_num)
 	int result;
 
 	if (stack == NULL || *stack == NULL || (*stack)->nxt == NULL)
-		more_error(8, l_num, "and");
+		more_error(8, l_num, "add");
 
 	(*stack) = (*stack)->nxt;
 	result = (*stack)->n + (*stack)->prev->n;
-	(*stack)-> result;
+	(*stack)->n = result;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -59,7 +59,7 @@ void sub_nodes(stack_t **stack, unsigned int l_num)
 {
 	int result;
 
-	if (stack == NULL || *stack == NULL || (*stack)->NULL)
+	if (stack == NULL || *stack == NULL || (*stack)->nxt == NULL)
 		more_error(8, l_num, "sub");
 
 	(*stack) = (*stack)->nxt;
@@ -84,6 +84,9 @@ void div_nodes(stack_t **stack, unsigned int l_num)
 
 	if ((*stack)->n == 0)
 		more_error(9, l_num);
+
+	(*stack) = (*stack)->nxt;
+	r = (*stack)->n / (*stack)->prev->n;
 
 	(*stack)->n = r;
 	free((*stack)->prev);

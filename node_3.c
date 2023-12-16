@@ -12,6 +12,9 @@ void mult_nodes(stack_t **stack, unsigned int l_num)
 	if (stack == NULL || *stack == NULL || (*stack)->nxt == NULL)
 		more_error(8, l_num, "mul");
 
+	(*stack) = (*stack)->nxt;
+	r = (*stack)->n * (*stack)->prev->n;
+
 	(*stack)->n = r;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;

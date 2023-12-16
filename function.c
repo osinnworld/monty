@@ -16,6 +16,7 @@ void find_func(char *opcode, char *arg, int l_num, int fmt)
 		{"push", add_stack},
 		{"pall", show_stack},
 		{"pint", show_top},
+		{"pop", pop_top},
 		{"no_opera", no_opera},
 		{"swap", swap_nodes},
 		{"add", add_nodes},

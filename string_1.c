@@ -114,7 +114,7 @@ int parse_line(char *buffer, int l_num, int fmt)
 	if (opcode == NULL)
 		return (fmt);
 	f = strtok(NULL, delimi);
-	
+
 	if (strcmp(opcode, "stack") == 0)
 		return (0);
 

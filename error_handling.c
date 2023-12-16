@@ -38,7 +38,8 @@ void err(int error_code, ...)
 	exit(EXIT_FAILURE);
 }
 
-/**string_error - manages errors related to string operations
+/**
+ * string_error - manages errors related to string operations
  * @error_code: parameter
  */
 void string_error(int error_code, ...)

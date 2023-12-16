@@ -80,21 +80,22 @@ void rotate_left(stack_t **stack, __attribute__((unused))unsigned int l_num)
  */
 void rotate_right(stack_t **stack, __attribute__((unused))unsigned int l_num)
 {
-	stack_t *tmp;
+	stack_t *tmp, *last;
 
 	if (stack == NULL || *stack == NULL || (*stack)->nxt == NULL)
 		return;
 
 	tmp = *stack;
+	last = tmp;
 
-	while (tmp->nxt != NULL)
-		tmp = tmp->nxt;
+	while (last->nxt != NULL)
+		last = last->nxt;
 
-	tmp->nxt = *stack;
-	tmp->prev->nxt = NULL;
-	tmp->prev = NULL;
-	(*stack)->prev = tmp;
-	(*stack) = tmp;
+	last->nxt = tmp;
+	tmp->prev = last;
+	*stack = tmp->nxt;
+	(*stack)->prev->nxt = NULL;
+	(*stack)->prev = NULL;
 }
 
 /**

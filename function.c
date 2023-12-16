@@ -27,7 +27,7 @@ void find_func(char *opcode, char *arg, int l_num, int fmt)
 		{"pchar", print_char},
 		{"pstr", print_string},
 		{"rotl", rotate_left},
-		{"rotate_right", rotate_right},
+		{"rotr", rotate_right},
 		{NULL, NULL}
 	};
 

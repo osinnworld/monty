@@ -55,18 +55,20 @@ void print_string(stack_t **stack, __attribute__((unused))unsigned int l_num)
  */
 void rotate_left(stack_t **stack, __attribute__((unused))unsigned int l_num)
 {
-	stack_t *tmp;
+	stack_t *tmp, *last;
 
 	if (stack == NULL || *stack == NULL || (*stack)->nxt == NULL)
 		return;
 
 	tmp = *stack;
-	while (tmp->nxt != NULL)
-		tmp = tmp->nxt;
+	last = tmp;
 
-	tmp->nxt = *stack;
-	(*stack)->prev = tmp;
-	*stack = (*stack)->nxt;
+	while (last->nxt != NULL)
+		last = last->nxt;
+
+	last->nxt = *stack;
+	tmp->prev = last;
+	*stack = tmp->nxt;
 	(*stack)->prev->nxt = NULL;
 	(*stack)->prev = NULL;
 }

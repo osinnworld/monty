@@ -39,7 +39,7 @@ typedef void (*func_op)(stack_t **, unsigned int);
 
 void print_char(stack_t **stack, unsigned int l_num);
 void print_string(stack_t **stack, __attribute__((unused))unsigned int l_num);
-void rotate_left(stack_t **stack, __attribute__((unused))unsigned int l_num);
+void rotate_left(stack_t **stack, unsigned int l_num);
 void rotate_right(stack_t **stack, __attribute__((unused))unsigned int l_num);
 int parse_line(char *buffer, int l_num, int fmt);
 

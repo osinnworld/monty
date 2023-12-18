@@ -71,6 +71,7 @@ void err(int error_code, ...);
 void string_error(int error_code, ...);
 void more_error(int error_code, ...);
 
+void pchar(stack_t **stack, unsigned int l_num);
 void nop(stack_t **stack, unsigned int l_num);
 
 #endif

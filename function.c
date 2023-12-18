@@ -28,6 +28,7 @@ void find_func(char *opcode, char *arg, int l_num, int fmt)
 		{"pstr", print_string},
 		{"rotl", rotate_left},
 		{"rotr", rotate_right},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
